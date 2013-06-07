@@ -1,4 +1,6 @@
 function ans = pascalTri(n)
-syms x y
-coeffs(expand((x+y)^n));
+ans=nchoosek(n,0);
+for i=1:n
+    ans=[ans nchoosek(n,i)];
+end
 end
